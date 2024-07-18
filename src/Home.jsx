@@ -4,8 +4,8 @@ const Home = ({data}) => {
     <>
     <h2>Lista de datos</h2>
     <ul>
-      {data.map(item => (
-        <li key={item._id}>
+      {data.map((item, i) => (
+        <li key={i}>
           <Link to={`/${item._id}`}>{item.title}</Link>
         </li>
       ))}
